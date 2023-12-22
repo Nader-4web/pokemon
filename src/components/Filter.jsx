@@ -1,4 +1,22 @@
 import { useState, useEffect} from "react"
+import plante from "../assets/plante.png"
+import acier from "../assets/acier.png"
+import feu from "../assets/feu.png"
+import electrik from "../assets/electrik.png"
+import glace from "../assets/glace.png"
+import insecte from "../assets/insecte.png"
+import fee from "../assets/fee.png"
+import normal from "../assets/normal.png"
+import poison from "../assets/poison.png"
+import dragon from "../assets/dragon.png"
+import combat from "../assets/plante.png"
+import sol from "../assets/sol.png"
+import spectre from "../assets/spectre.png"
+import roche from "../assets/roche.png"
+import vol from "../assets/vol.png"
+import tenebres from "../assets/tenebres.png"
+import psy from "../assets/psy.png"
+import eau from "../assets/eau.png"
 
 
 function Filter({applyFilter, hideFilter}){
@@ -271,24 +289,24 @@ if (from <= to) {
 
             <h3 className="filter-titles">Types</h3>
             <div className="container-types filter-containers">
-              <div className={`container-types_type ${type === "Plante" ? "selected" : ""}`} onClick={getSelectedType} id="Plante"><div><img className="container-types_type_icon" src="../assets/plante.png" alt="" /></div>Plante</div>
-              <div className={`container-types_type ${type === "Eau" ? "selected" : ""}`} onClick={getSelectedType} id="Eau"><div><img className="container-types_type_icon" src="../assets/eau.png" alt="" /></div>Eau</div>
-              <div className={`container-types_type ${type === "Insecte" ? "selected" : ""}`} onClick={getSelectedType} id="Insecte"><div><img className="container-types_type_icon" src="../assets/insecte.png" alt="" /></div>Insecte</div>
-              <div className={`container-types_type ${type === "Vol" ? "selected" : ""}`} onClick={getSelectedType} id="Vol"><div><img className="container-types_type_icon" src="../assets/vol.png" alt="" /></div>Vol</div>
-              <div className={`container-types_type ${type === "Feu" ? "selected" : ""}`} onClick={getSelectedType} id="Feu"><div><img className="container-types_type_icon" id="Feu" src="../assets/feu.png" alt="" /></div>Feu</div>
-              <div className={`container-types_type ${type === "Électrik" ? "selected" : ""}`} onClick={getSelectedType} id="Électrik"><div><img className="container-types_type_icon" src="../assets/electrik.png" alt="" /></div>Électrik</div>
-              <div className={`container-types_type ${type === "Ténèbres" ? "selected" : ""}`} onClick={getSelectedType} id="Ténèbres"><div><img className="container-types_type_icon" src="../assets/tenebres.png" alt="" /></div>Ténèbres</div>
-              <div className={`container-types_type ${type === "Psy" ? "selected" : ""}`}onClick={getSelectedType} id="Psy"><div><img className="container-types_type_icon" src="../assets/psy.png" alt="" /></div>Psy</div>
-              <div className={`container-types_type ${type === "Normal" ? "selected" : ""}`}onClick={getSelectedType} id="Normal"><div><img className="container-types_type_icon" src="../assets/normal.png" alt="" /></div>Normal</div>
-              <div className={`container-types_type ${type === "Dragon" ? "selected" : ""}`}onClick={getSelectedType} id="Dragon"><div><img className="container-types_type_icon" src="../assets/dragon.png" alt="" /></div>Dragon</div>
-              <div className={`container-types_type ${type === "Poison" ? "selected" : ""}`}onClick={getSelectedType} id="Poison"><div><img className="container-types_type_icon" src="../assets/poison.png" alt="" /></div>Poison</div>
-              <div className={`container-types_type ${type === "Spectre" ? "selected" : ""}`}onClick={getSelectedType} id="Spectre"><div><img className="container-types_type_icon" src="../assets/spectre.png" alt="" /></div>Spectre</div>
-              <div className={`container-types_type ${type === "Acier" ? "selected" : ""}`}onClick={getSelectedType} id="Acier"><div><img className="container-types_type_icon" src="../assets/acier.png" alt="" /></div>Acier</div>
-              <div className={`container-types_type ${type === "Combat" ? "selected" : ""}`}onClick={getSelectedType} id="Combat"><div><img className="container-types_type_icon" src="../assets/combat.png" alt="" /></div>Combat</div>
-              <div className={`container-types_type ${type === "Glace" ? "selected" : ""}`}onClick={getSelectedType} id="Glace"><div><img className="container-types_type_icon" src="../assets/glace.png" alt="" /></div>Glace</div>
-              <div className={`container-types_type ${type === "Sol" ? "selected" : ""}`}onClick={getSelectedType} id="Sol"><div><img className="container-types_type_icon" src="../assets/sol.png" alt="" /></div>Sol</div>
-              <div className={`container-types_type ${type === "Roche" ? "selected" : ""}`}onClick={getSelectedType} id="Roche"><div><img className="container-types_type_icon" src="../assets/roche.png" alt="" /></div>Roche</div>
-              <div className={`container-types_type ${type === "Fée" ? "selected" : ""}`} onClick={getSelectedType} id="Fée"><div><img className="container-types_type_icon" src="../assets/fee.png" alt="" /></div>Fée</div>
+              <div className={`container-types_type ${type === "Plante" ? "selected" : ""}`} onClick={getSelectedType} id="Plante"><div><img className="container-types_type_icon" src={plante} alt="" /></div>Plante</div>
+              <div className={`container-types_type ${type === "Eau" ? "selected" : ""}`} onClick={getSelectedType} id="Eau"><div><img className="container-types_type_icon" src={eau} alt="" /></div>Eau</div>
+              <div className={`container-types_type ${type === "Insecte" ? "selected" : ""}`} onClick={getSelectedType} id="Insecte"><div><img className="container-types_type_icon" src={insecte} alt="" /></div>Insecte</div>
+              <div className={`container-types_type ${type === "Vol" ? "selected" : ""}`} onClick={getSelectedType} id="Vol"><div><img className="container-types_type_icon" src={vol} alt="" /></div>Vol</div>
+              <div className={`container-types_type ${type === "Feu" ? "selected" : ""}`} onClick={getSelectedType} id="Feu"><div><img className="container-types_type_icon" id="Feu" src={feu} alt="" /></div>Feu</div>
+              <div className={`container-types_type ${type === "Électrik" ? "selected" : ""}`} onClick={getSelectedType} id="Électrik"><div><img className="container-types_type_icon" src={electrik} alt="" /></div>Électrik</div>
+              <div className={`container-types_type ${type === "Ténèbres" ? "selected" : ""}`} onClick={getSelectedType} id="Ténèbres"><div><img className="container-types_type_icon" src={tenebres} alt="" /></div>Ténèbres</div>
+              <div className={`container-types_type ${type === "Psy" ? "selected" : ""}`}onClick={getSelectedType} id="Psy"><div><img className="container-types_type_icon" src={psy} alt="" /></div>Psy</div>
+              <div className={`container-types_type ${type === "Normal" ? "selected" : ""}`}onClick={getSelectedType} id="Normal"><div><img className="container-types_type_icon" src={normal} alt="" /></div>Normal</div>
+              <div className={`container-types_type ${type === "Dragon" ? "selected" : ""}`}onClick={getSelectedType} id="Dragon"><div><img className="container-types_type_icon" src={dragon} alt="" /></div>Dragon</div>
+              <div className={`container-types_type ${type === "Poison" ? "selected" : ""}`}onClick={getSelectedType} id="Poison"><div><img className="container-types_type_icon" src={poison} alt="" /></div>Poison</div>
+              <div className={`container-types_type ${type === "Spectre" ? "selected" : ""}`}onClick={getSelectedType} id="Spectre"><div><img className="container-types_type_icon" src={spectre} alt="" /></div>Spectre</div>
+              <div className={`container-types_type ${type === "Acier" ? "selected" : ""}`}onClick={getSelectedType} id="Acier"><div><img className="container-types_type_icon" src={acier} alt="" /></div>Acier</div>
+              <div className={`container-types_type ${type === "Combat" ? "selected" : ""}`}onClick={getSelectedType} id="Combat"><div><img className="container-types_type_icon" src={combat} alt="" /></div>Combat</div>
+              <div className={`container-types_type ${type === "Glace" ? "selected" : ""}`}onClick={getSelectedType} id="Glace"><div><img className="container-types_type_icon" src={glace} alt="" /></div>Glace</div>
+              <div className={`container-types_type ${type === "Sol" ? "selected" : ""}`}onClick={getSelectedType} id="Sol"><div><img className="container-types_type_icon" src={sol} alt="" /></div>Sol</div>
+              <div className={`container-types_type ${type === "Roche" ? "selected" : ""}`}onClick={getSelectedType} id="Roche"><div><img className="container-types_type_icon" src={roche} alt="" /></div>Roche</div>
+              <div className={`container-types_type ${type === "Fée" ? "selected" : ""}`} onClick={getSelectedType} id="Fée"><div><img className="container-types_type_icon" src={fee} alt="" /></div>Fée</div>
             </div>
 
               {/* ////////////////////////////////// POIDS /////////////////////// */}
