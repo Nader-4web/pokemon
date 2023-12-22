@@ -30,7 +30,7 @@ function Home() {
         `https://tyradex.vercel.app/api/v1/pokemon`
       );
       const data = await response.json();
-      const slicedData = data.slice(1, 100)
+      const slicedData = data.slice(1, data.length)
     
       if(data.status === 404){
         console.log("status 404")
