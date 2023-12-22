@@ -177,6 +177,10 @@ function Home() {
   const updatePokemonId = (id)=>{
     setPokemonId(id)
   }
+
+  const refreshPage = ()=>{
+    location.reload()
+  }
   
   if ((!pokemons ||pokemons.length === 0) && searchValue.length > 0) {
     console.log("pas de pokémon")
@@ -187,7 +191,7 @@ function Home() {
           {selectedPokemon && <PokemonDetails hideCard ={hideCard} pokemonId = {pokemonId}/>}
           {isFilterVisible && <div className="overlay"></div>}
           <header>
-          <h1>Pokedex</h1>
+          <h1 className="h1-pokedex" onClick={refreshPage}>Pokedex</h1>
           <p>Utilises le filtre pour trouver des pokémons par génération, par type, et plus !</p>
           <Searchbar onSearchChange={handleSearchChange} displayFilter={displayFilter} />
         </header>
@@ -223,7 +227,7 @@ function Home() {
           {selectedPokemon && <PokemonDetails hideCard ={hideCard} pokemonId = {pokemonId}/>}
           {isFilterVisible && <div className="overlay"></div>}
           <header>
-          <h1>Pokedex</h1>
+          <h1 className="h1-pokedex" onClick={refreshPage}>Pokedex</h1>
           <p>Utilises le filtre pour trouver des pokémons par génération, par type, et plus !</p>
           <Searchbar onSearchChange={handleSearchChange} displayFilter={displayFilter} />
         </header>
@@ -271,7 +275,7 @@ function Home() {
         {selectedPokemon && <PokemonDetails hideCard ={hideCard} pokemonId = {pokemonId}/> }
         {isFilterVisible && <div className="overlay"></div>}
         <header id="header">
-          <h1>Pokedex</h1>
+        <h1 className="h1-pokedex" onClick={refreshPage}>Pokedex</h1>
           <p>Utilises le filtre pour trouver des pokémons par génération, par type, et plus !</p>
         <Searchbar  onSearchChange={handleSearchChange} displayFilter={displayFilter}/>
         </header>
