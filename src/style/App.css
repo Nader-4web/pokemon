@@ -46,6 +46,7 @@ h1{
 
 .h1-pokedex{
   cursor: pointer;
+  width: fit-content;
 }
 
 header p{
@@ -583,13 +584,18 @@ footer p{
   border-top: 1px solid #DFE4EC;
   align-items: center;
   padding: 10px;
+  height: 50px;
 }
 
 .navigation_elements{
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column; */
   align-items: center;
   gap: 5px;
+}
+
+.navigation_pokeball{
+  width: 20px;
 }
 
 #navigation_elements_heart{

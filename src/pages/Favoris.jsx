@@ -39,7 +39,7 @@ function Favoris() {
                         <NavLink to ="/"
                         className={(activeLink) => (activeLink.isActive ? 'activeLink' : 'not-active-link')}>
                             <div className="navigation_elements">
-                                <i className="fa-solid fa-house"></i>
+                                {/* <i className="fa-solid fa-house"></i> */}
                                 {/* <img src="home.png" alt="" className="icon-home" /> */}
                                 <h4 className="navigation_elements_text">Accueil</h4>
                             </div>
@@ -47,8 +47,9 @@ function Favoris() {
 
                     <NavLink  className={(activeLink) => (activeLink.isActive ? 'activeLink' : '')}>
                         <div className="navigation_elements">
-                            <i className="fa-solid fa-heart" id="navigation_elements_heart"></i>
+                            {/* <i className="fa-solid fa-heart" id="navigation_elements_heart"></i> */}
                             <h4 className="navigation_elements_text">Favoris</h4>
+                            <img src="pokeball-img.png" alt="" />
                         </div>
                     </NavLink>      
                 </nav>
@@ -80,15 +81,17 @@ function Favoris() {
                               <NavLink to ="/"
                               className={(activeLink) => (activeLink.isActive ? 'activeLink' : 'not-active-link')}>
                                   <div className="navigation_elements">
-                                      <i className="fa-solid fa-house"></i>
+                                      {/* <i className="fa-solid fa-house"></i> */}
                                       {/* <img src="home.png" alt="" className="icon-home" /> */}
                                       <h4 className="navigation_elements_text">Accueil</h4>
+                                      
                                   </div>
                               </NavLink>
       
                           <NavLink  className={(activeLink) => (activeLink.isActive ? 'activeLink' : '')}>
                               <div className="navigation_elements">
-                                  <i className="fa-solid fa-heart" id="navigation_elements_heart"></i>
+                                  {/* <i className="fa-solid fa-heart" id="navigation_elements_heart"></i> */}
+                                  <img src="pokeball-4.png" alt="" className="navigation_pokeball"/>
                                   <h4 className="navigation_elements_text">Favoris</h4>
                               </div>
                           </NavLink>      
