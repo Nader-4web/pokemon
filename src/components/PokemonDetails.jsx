@@ -88,6 +88,8 @@ function PokemonDetails({hideCard, pokemonId}){
 
     let typeColor = pokemon.types[0].name;
 
+    
+
     const addToFavorite = () => {    
         let favoris = JSON.parse(localStorage.getItem("favoris")) || [];
         let pokemonsInLS = favoris.find(p => p?.pokedexId === pokemon?.pokedexId);

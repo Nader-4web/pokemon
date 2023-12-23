@@ -231,13 +231,14 @@ function Home() {
           <p>Utilises le filtre pour trouver des pokémons par génération, par type, et plus !</p>
           <Searchbar onSearchChange={handleSearchChange} displayFilter={displayFilter} />
         </header>
-          <div className="block-cards" onClick={clickedPokemon}>
+          <div className="block-cards">
             <Cards key={pokemon.pokedexId}
               name={pokemon.name.fr}
               picture={pokemon.sprites.regular}
               id = {pokemon.pokedexId}
               types ={pokemon.types}
               updatePokemonId = {updatePokemonId}
+              clickedPokemon = {clickedPokemon}
             />
           </div>
           { isFilterVisible && < Filter displayFilter={isFilterVisible} applyFilter={applyFilter} hideFilter={hideFilter}/>} 
@@ -279,14 +280,15 @@ function Home() {
           <p>Utilises le filtre pour trouver des pokémons par génération, par type, et plus !</p>
         <Searchbar  onSearchChange={handleSearchChange} displayFilter={displayFilter}/>
         </header>
-        <div className="block-cards" onClick={clickedPokemon}>
+        <div className="block-cards">
           {pokemons.map((pokemon) => ( 
             <Cards key={pokemon.pokedexId} 
             name={pokemon.name.fr} 
             picture={pokemon.sprites.regular}
             id = {pokemon.pokedexId}
             types ={pokemon.types}
-            updatePokemonId = {updatePokemonId} />
+            updatePokemonId = {updatePokemonId}
+            clickedPokemon ={clickedPokemon} />
             ))}
         </div>
         { isFilterVisible && < Filter displayFilter={isFilterVisible} applyFilter={applyFilter} hideFilter={hideFilter}/>}

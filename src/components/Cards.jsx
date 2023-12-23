@@ -1,6 +1,6 @@
 import "../style/App.css"
 
-function Cards({picture, name, id, types, updatePokemonId}) {
+function Cards({picture, name, id, types, updatePokemonId, clickedPokemon}) {
         
     let arrType = [];
     let arrImg = [];
@@ -34,6 +34,7 @@ function Cards({picture, name, id, types, updatePokemonId}) {
     let typeColor = types[0].name;
 
     const handleClick = ()=>{
+        clickedPokemon()
         const selectedPokemonId = id;
         updatePokemonId(selectedPokemonId)
     }

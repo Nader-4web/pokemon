@@ -44,8 +44,8 @@ function Favoris() {
 
                     <NavLink  className={(activeLink) => (activeLink.isActive ? 'activeLink' : '')}>
                         <div className="navigation_elements">
-                            <h4 className="navigation_elements_text">Favoris</h4>
                             <img src="pokeball-4.png" className="navigation_pokeball" alt="" />
+                            <h4 className="navigation_elements_text">Favoris</h4>
                         </div>
                     </NavLink>      
                 </nav>
@@ -60,14 +60,15 @@ function Favoris() {
                       <header>
                       <h1>Favoris</h1>
                       </header>
-                      <div className="block-cards" onClick={clickedPokemon}>
+                      <div className="block-cards">
                           {pokemonsInLs.map((pokemon) =>(
                           <Cards key = {pokemon.pokedexId} 
                           picture = {pokemon.sprites.regular}
                           id = {pokemon.pokedexId}
                           types = {pokemon.types}
                           name = {pokemon.name.fr}
-                          updatePokemonId = {updatePokemonId} />
+                          updatePokemonId = {updatePokemonId} 
+                          clickedPokemon = {clickedPokemon}/>
                           ))}
                       </div>
       
