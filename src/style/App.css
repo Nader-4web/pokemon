@@ -100,7 +100,7 @@ border: 2px solid #E8EBF1;
   width:47%;
   border-radius: 20px;
   max-width: 180px;
-  background-image: url("pokeball-img.png");
+  background-image: url("../assets/pokeball-img.png");
   background-repeat: no-repeat;
   background-position: top;
   background-blend-mode: screen;
