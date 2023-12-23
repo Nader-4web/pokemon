@@ -45,7 +45,7 @@ function Evolutions({ nextEvo, preEvo, pkmnTypes, evolution, name, id, picture }
       arrType.push({"type" :pkmnTypes[i].name})
   }
 
-  if(evolution === null){
+  if(evolution === null || (evolution.pre === null && evolution.next === null)){
     return(
         <div className="block-evolutions">
               <h3 className="no-evolution"> Ce pokémon n&apos;évolue pas</h3>  

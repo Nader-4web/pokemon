@@ -9,7 +9,7 @@ import fee from "../assets/fee.png"
 import normal from "../assets/normal.png"
 import poison from "../assets/poison.png"
 import dragon from "../assets/dragon.png"
-import combat from "../assets/plante.png"
+import combat from "../assets/combat.png"
 import sol from "../assets/sol.png"
 import spectre from "../assets/spectre.png"
 import roche from "../assets/roche.png"
@@ -324,8 +324,11 @@ if (from <= to) {
                 </div>
             </div>
             <div className="sliders_control">
-                <input onInput = {() => controlFromSlider(fromSlider, toSlider,fromInput)}  onChange={getMinWeightValue} value={minWeight} id="fromSlider" type="range"  min="0" max="950"/>
-                <input onInput = {() => controlToSlider(fromSlider, toSlider,toInput)}   onChange={getMaxWeightValue} value={maxWeight} id="toSlider" type="range"  min="0" max="950"/>
+                <input onInput = {() => controlFromSlider(fromSlider, toSlider,fromInput)} 
+                onChange={getMinWeightValue} value={minWeight} id="fromSlider" type="range"  min="0" max="950"/>
+                
+                <input onInput = {() => controlToSlider(fromSlider, toSlider,toInput)} 
+                onChange={getMaxWeightValue} value={maxWeight} id="toSlider" type="range"  min="0" max="950"/>
             </div>
          
         </div>
@@ -344,12 +347,20 @@ if (from <= to) {
                 </div>
             </div>
             <div className="sliders_control">
-                <input onInput = {() => controlFromSliderHeight(fromSliderHeight, toSliderHeight,fromInputHeight)} onChange={getMinHeightValue }id="fromSliderHeight" value={minHeight} type="range"  min="0" max="15"/>
-                <input onInput = {() => controlToSliderHeight(fromSliderHeight, toSliderHeight,toInputHeight)} onChange={getMaxHeightValue} id="toSliderHeight" value={maxHeight} type="range"  min="0" max="15"/>
+                <input onInput = {() => controlFromSliderHeight(fromSliderHeight, toSliderHeight,fromInputHeight)} 
+                onChange={getMinHeightValue }id="fromSliderHeight" value={minHeight} type="range"  min="0"
+                max="14"
+                />
+
+                <input onInput = {() => controlToSliderHeight(fromSliderHeight, toSliderHeight,toInputHeight)} 
+                onChange={getMaxHeightValue} id="toSliderHeight" value={maxHeight} type="range"  min="0"
+                max="15"
+                />
             </div>      
         </div>
 
-          <button className={`apply-filter-button ${isButtonDisabled ? "disabledButton" : ""}`} onClick={handleClick} disabled={isButtonDisabled}>Appliquer</button>
+          <button className={`apply-filter-button ${isButtonDisabled ? "disabledButton" : ""}`} 
+          onClick={handleClick} disabled={isButtonDisabled}>Appliquer</button>
           <p id="default-params" onClick={defaultParams}>Rétablir les paramètres par défault</p>
         </div>
     );
