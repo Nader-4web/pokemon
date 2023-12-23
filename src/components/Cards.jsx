@@ -1,4 +1,3 @@
-import "pokeball-img.png"
 import "../style/App.css"
 
 function Cards({picture, name, id, types, updatePokemonId}) {
