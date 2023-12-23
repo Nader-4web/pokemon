@@ -183,7 +183,6 @@ function Home() {
   }
   
   if ((!pokemons ||pokemons.length === 0) && searchValue.length > 0) {
-    console.log("pas de pokémon")
 
     return (
       <div>
@@ -204,13 +203,12 @@ function Home() {
         <nav className="navigation">
           <NavLink className={(activeLink) => (activeLink.isActive ? 'activeLink' : 'not-active-link')}>
             <div className="navigation_elements">
-              <i className="fa-solid fa-house"></i>
               <h4 className="navigation_elements_text">Accueil</h4>
+              <img src="pokeball-4.png" alt="" className="navigation_pokeball"/>
             </div>
           </NavLink>
           <NavLink to ="/favoris" className={(activeLink) => (activeLink.isActive ? 'activeLink' : 'not-active-link')}>
             <div className="navigation_elements">
-              <i className="fa-regular fa-heart" id="navigation_elements_heart"></i>
               <h4 className="navigation_elements_text">Favoris</h4>
           </div>
           </NavLink>
@@ -246,13 +244,12 @@ function Home() {
         <nav className="navigation">
           <NavLink className={(activeLink) => (activeLink.isActive ? 'activeLink' : 'not-active-link')}>
           <div className="navigation_elements">
-            <i className="fa-solid fa-house"></i>
             <h4 className="navigation_elements_text">Accueil</h4>
+            <img src="pokeball-4.png" alt="" className="navigation_pokeball"/>
           </div>
           </NavLink>
           <NavLink to ="/favoris" className={(activeLink) => (activeLink.isActive ? 'activeLink' : 'not-active-link')}>
-            <div className="navigation_elements">
-              <i className="fa-regular fa-heart" id="navigation_elements_heart"></i>
+            <div className="navigation_elements">            
               <h4 className="navigation_elements_text">Favoris</h4>
           </div>
           </NavLink>
