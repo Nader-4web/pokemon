@@ -9,7 +9,6 @@ lerna-debug.log*
 README.md
 
 .eslintrc.cjs
-vite.config.js
 
 node_modules
 dist
