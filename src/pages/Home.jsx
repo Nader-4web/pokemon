@@ -296,7 +296,6 @@ function Home() {
         <nav className="navigation">
           <NavLink className={(activeLink) => (activeLink.isActive ? 'activeLink' : 'not-active-link')}>
             <div className="navigation_elements">         
-              {/* <i className="fa-solid fa-house"></i> */}
               <h4 className="navigation_elements_text">Accueil</h4>
               <img src="pokeball-4.png" alt="" className="navigation_pokeball"/>
             </div>
@@ -304,7 +303,6 @@ function Home() {
           
           <NavLink to ="/favoris" className={(activeLink) => (activeLink.isActive ? 'activeLink' : 'not-active-link')}>
                 <div className="navigation_elements">          
-                {/* <i className="fa-regular fa-heart" id="navigation_elements_heart"></i> */}
                 <h4 className="navigation_elements_text">Favoris</h4>
               </div>
             </NavLink>

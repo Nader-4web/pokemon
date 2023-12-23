@@ -637,16 +637,22 @@ footer p{
 .no-pokemons{
   text-align: center;
   color: #20293A;
+  color: #20293A;
+  font-weight: 400;
+  font-size: 18px;
+  padding-inline: 20px;
 }
 
 .block-no-pokemon-picture{
   display: flex;
   justify-content: center;
-  margin-top: 50px;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
 }
 
 .no-pokemon-picture{
-  width: 220px;
+  width: 140px;
 }
 
 

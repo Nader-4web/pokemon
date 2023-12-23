@@ -27,11 +27,10 @@ function Favoris() {
                 {selectedPokemon && <PokemonDetails hideCard ={hideCard} pokemonId = {pokemonId}/>}
                     <header>
                     <h1>Favoris</h1>
-                    <p>Ceci est la liste de tes pokémons préférés</p>
                     </header>
 
-                    <h3 className="no-pokemons">Aucun pokémons dans tes favoris actuellement </h3>
                     <div className="block-no-pokemon-picture">
+                    <h3 className="no-pokemons">Aucun pokémon dans tes favoris actuellement </h3>
                         <img src="pikachu.png" alt=""  className="no-pokemon-picture"/>
                     </div>
                 </div>
@@ -39,17 +38,14 @@ function Favoris() {
                         <NavLink to ="/"
                         className={(activeLink) => (activeLink.isActive ? 'activeLink' : 'not-active-link')}>
                             <div className="navigation_elements">
-                                {/* <i className="fa-solid fa-house"></i> */}
-                                {/* <img src="home.png" alt="" className="icon-home" /> */}
                                 <h4 className="navigation_elements_text">Accueil</h4>
                             </div>
                         </NavLink>
 
                     <NavLink  className={(activeLink) => (activeLink.isActive ? 'activeLink' : '')}>
                         <div className="navigation_elements">
-                            {/* <i className="fa-solid fa-heart" id="navigation_elements_heart"></i> */}
                             <h4 className="navigation_elements_text">Favoris</h4>
-                            <img src="pokeball-img.png" alt="" />
+                            <img src="pokeball-4.png" className="navigation_pokeball" alt="" />
                         </div>
                     </NavLink>      
                 </nav>
@@ -63,7 +59,6 @@ function Favoris() {
                   {selectedPokemon && <PokemonDetails hideCard ={hideCard} pokemonId = {pokemonId}/>}
                       <header>
                       <h1>Favoris</h1>
-                      <p>Ceci est la liste de tes pokémons préférés</p>
                       </header>
                       <div className="block-cards" onClick={clickedPokemon}>
                           {pokemonsInLs.map((pokemon) =>(
@@ -80,17 +75,13 @@ function Favoris() {
                        <nav className="navigation">         
                               <NavLink to ="/"
                               className={(activeLink) => (activeLink.isActive ? 'activeLink' : 'not-active-link')}>
-                                  <div className="navigation_elements">
-                                      {/* <i className="fa-solid fa-house"></i> */}
-                                      {/* <img src="home.png" alt="" className="icon-home" /> */}
-                                      <h4 className="navigation_elements_text">Accueil</h4>
-                                      
+                                  <div className="navigation_elements">                                   
+                                      <h4 className="navigation_elements_text">Accueil</h4>                                    
                                   </div>
                               </NavLink>
       
                           <NavLink  className={(activeLink) => (activeLink.isActive ? 'activeLink' : '')}>
                               <div className="navigation_elements">
-                                  {/* <i className="fa-solid fa-heart" id="navigation_elements_heart"></i> */}
                                   <img src="pokeball-4.png" alt="" className="navigation_pokeball"/>
                                   <h4 className="navigation_elements_text">Favoris</h4>
                               </div>
