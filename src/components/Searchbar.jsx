@@ -10,14 +10,11 @@ function Searchbar ({onSearchChange, displayFilter})  {
       const scrollPosition = window.scrollY;
       const fixedPositionThreshold = 500;
 
-      // Mettez à jour l'état en fonction de la position de défilement
       setFixedSearchbar(scrollPosition >= fixedPositionThreshold);
     };
 
-    // Ajoutez un écouteur d'événements pour suivre le défilement
     window.addEventListener('scroll', handleScroll);
 
-    // Nettoyez l'écouteur d'événements lorsque le composant est démonté
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };

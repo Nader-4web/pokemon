@@ -45,7 +45,8 @@ function Home() {
           .replace(/[^a-z0-9]/g, '');
         }
 
-      const allPokemons = pokemonsArray.filter(pokemon => normalizeString(pokemon.name.fr).startsWith(searchValue));
+      const allPokemons = pokemonsArray.filter(pokemon => normalizeString(pokemon.name.fr).startsWith(searchValue)
+      || (pokemon.pokedexId === Number(searchValue)));
       const getPokeByGeneration = allPokemons.filter((pokemon) => pokemon.generation === generation);   
       const getPokeByType = allPokemons.filter((pokemon) => pokemon.types.some((t) => t.name === type));
       const getPokeByWeight = allPokemons.filter(pokemon => {const weight = parseFloat(pokemon.weight.replace(",", "."));
