@@ -24,10 +24,10 @@ function Filter({applyFilter, hideFilter}){
   const [generation, setGeneration] = useState()
   const [type, setType] = useState("");
   const [isButtonDisabled, setIsButtonDisabled] = useState(true);
-  const [minWeight, setMinWeight] = useState()
-  const [maxWeight, setMaxWeight] = useState()
-  const [minHeight, setMinHeight] = useState()
-  const [maxHeight, setMaxHeight] = useState()
+  const [minWeight, setMinWeight] = useState(undefined)
+  const [maxWeight, setMaxWeight] = useState(undefined)
+  const [minHeight, setMinHeight] = useState(undefined)
+  const [maxHeight, setMaxHeight] = useState(undefined)
 
 
   useEffect(() => {
@@ -36,6 +36,8 @@ function Filter({applyFilter, hideFilter}){
       && maxWeight === undefined));
 
   }, [generation, type, minWeight, maxWeight, minHeight, maxHeight]);
+
+
 
 
 
@@ -100,14 +102,15 @@ function Filter({applyFilter, hideFilter}){
   }
 
   const defaultParams = ()=>{
-    // setIsButtonDisabled(true)
     setGeneration(undefined)
+    setType(undefined)
     setMaxHeight(undefined)
     setMinHeight(undefined)
-    setType(undefined)
     setMinWeight(undefined)
     setMaxWeight(undefined)
   }
+
+ 
 
 ///////////////////SLIDERS AND INPUT CONTROLLERS FOR WEIGHT////////////////////
 

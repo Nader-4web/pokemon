@@ -52,13 +52,16 @@ function Cards({picture, name, id, types, updatePokemonId, clickedPokemon}) {
                                 <img key={i} className= "img-type" src={img} alt="" />
                             ))}
                         </div>
-                        <div className="block-type">      
+                        <div className="block-type">
                                 {arrType.map(({type}, i)=>(         
-                                <p key={i} className="type-name">{type}</p>
+                                    <div key={i} className="block-type_overlay"> 
+                                    <div className="overlay-type"></div>    
+                                <p  className="type-name">{type}</p>
+                        </div> 
                                 ))}
                         </div>
                     </div>                
-                        <img id ="img-meal" src={picture} alt="" />
+                        <img id ="img-pokemon" src={picture} alt="" />
                 </div>
                 
             </div>

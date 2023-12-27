@@ -112,7 +112,7 @@ function PokemonDetails({hideCard, pokemonId}){
             favoris.splice(index, 1)
             localStorage.setItem("favoris", JSON.stringify(favoris));
         }
-    }
+    } 
 
     return (
         <div className='selected-pokemon'>
@@ -131,7 +131,7 @@ function PokemonDetails({hideCard, pokemonId}){
             </div>
             <div className="pokemon-details">
                 <h4 onClick={displayAbout} className={about ? "active" : "pokemon-details_pointer"}>A propos</h4>
-                <h4 onClick={displayStats} className={stats ? "active" : "pokemon-details_pointer"}>Stats</h4>
+                <h4 onClick={displayStats} className={stats ? "active" : "pokemon-details_pointer"}>Stats</h4>            
                 <h4 onClick={displayEvolutions} className={evolutions ? "active" : "pokemon-details_pointer"}>Evolutions</h4>
             </div>
                 {about && <About poids = {pokemon.weight} taille = {pokemon.height} types = {pokemon.types} talents = {pokemon.talents}/>}

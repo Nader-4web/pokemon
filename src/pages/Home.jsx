@@ -157,14 +157,11 @@ function Home() {
       const scrollPosition = window.scrollY;
       const fixedPositionThreshold = 500;
 
-      // Mettez à jour l'état en fonction de la position de défilement
       setGoTopPage(scrollPosition >= fixedPositionThreshold);
     };
 
-    // Ajoutez un écouteur d'événements pour suivre le défilement
     window.addEventListener('scroll', handleScroll);
 
-    // Nettoyez l'écouteur d'événements lorsque le composant est démonté
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
@@ -182,7 +179,7 @@ function Home() {
     location.reload()
   }
   
-  if ((!pokemons ||pokemons.length === 0) && searchValue.length > 0) {
+  if ((!pokemons || pokemons.length === 0) && searchValue.length > 0) {
 
     return (
       <div>
@@ -190,7 +187,12 @@ function Home() {
           {selectedPokemon && <PokemonDetails hideCard ={hideCard} pokemonId = {pokemonId}/>}
           {isFilterVisible && <div className="overlay"></div>}
           <header>
-          <h1 className="h1-pokedex" onClick={refreshPage}>Pokedex</h1>
+          <div className="block-title-logo" onClick={refreshPage}>
+          <h1 className="h1-pokedex" >Pokedex</h1>
+            <div className="logo-pokedex">
+              <img className="img-logo" src="pokeball-4.png" alt="" />
+            </div>
+        </div>
           <p>Utilises le filtre pour trouver des pokémons par génération, par type, et plus !</p>
           <Searchbar onSearchChange={handleSearchChange} displayFilter={displayFilter} />
         </header>
@@ -216,7 +218,45 @@ function Home() {
       </div>
     );
 
-  } else if (pokemons.length === 1) {
+  }else if( !chargementTermine && pokemons.length === 0){
+    return (
+      <div>
+        <div id="wrapper">
+          {selectedPokemon && <PokemonDetails hideCard ={hideCard} pokemonId = {pokemonId}/>}
+          {isFilterVisible && <div className="overlay"></div>}
+          <header>
+          <div className="block-title-logo" onClick={refreshPage}>
+          <h1 className="h1-pokedex" >Pokedex</h1>
+            <div className="logo-pokedex">
+              <img className="img-logo" src="pokeball-4.png" alt="" />
+            </div>
+        </div>
+          <p>Utilises le filtre pour trouver des pokémons par génération, par type, et plus !</p>
+          <Searchbar onSearchChange={handleSearchChange} displayFilter={displayFilter} />
+        </header>
+          <div className="not-found">
+            <h3>Pokémon non trouvé !</h3>
+            <img id="photo-psychokwak" src="psycho-img.jpg" alt="" />
+          </div>
+          { isFilterVisible && < Filter displayFilter={isFilterVisible} applyFilter={applyFilter} hideFilter={hideFilter}/>} 
+        </div>
+        <nav className="navigation">
+          <NavLink className={(activeLink) => (activeLink.isActive ? 'activeLink' : 'not-active-link')}>
+            <div className="navigation_elements">
+              <h4 className="navigation_elements_text">Accueil</h4>
+              <img src="pokeball-4.png" alt="" className="navigation_pokeball"/>
+            </div>
+          </NavLink>
+          <NavLink to ="/favoris" className={(activeLink) => (activeLink.isActive ? 'activeLink' : 'not-active-link')}>
+            <div className="navigation_elements">
+              <h4 className="navigation_elements_text">Favoris</h4>
+          </div>
+          </NavLink>
+        </nav>
+      </div>
+    );
+
+  }else if (pokemons.length === 1) {
     const pokemon = pokemons[0];
 
     return (
@@ -225,7 +265,12 @@ function Home() {
           {selectedPokemon && <PokemonDetails hideCard ={hideCard} pokemonId = {pokemonId}/>}
           {isFilterVisible && <div className="overlay"></div>}
           <header>
-          <h1 className="h1-pokedex" onClick={refreshPage}>Pokedex</h1>
+          <div className="block-title-logo" onClick={refreshPage}>
+          <h1 className="h1-pokedex" >Pokedex</h1>
+            <div className="logo-pokedex">
+              <img className="img-logo" src="pokeball-4.png" alt="" />
+            </div>
+        </div>
           <p>Utilises le filtre pour trouver des pokémons par génération, par type, et plus !</p>
           <Searchbar onSearchChange={handleSearchChange} displayFilter={displayFilter} />
         </header>
@@ -273,7 +318,13 @@ function Home() {
         {selectedPokemon && <PokemonDetails hideCard ={hideCard} pokemonId = {pokemonId}/> }
         {isFilterVisible && <div className="overlay"></div>}
         <header id="header">
-        <h1 className="h1-pokedex" onClick={refreshPage}>Pokedex</h1>
+        <div className="block-title-logo" onClick={refreshPage}>
+          <h1 className="h1-pokedex" >Pokedex</h1>
+            <div className="logo-pokedex">
+              <img className="img-logo" src="pokeball-4.png" alt="" />
+            </div>
+        </div>
+
           <p>Utilises le filtre pour trouver des pokémons par génération, par type, et plus !</p>
         <Searchbar  onSearchChange={handleSearchChange} displayFilter={displayFilter}/>
         </header>
