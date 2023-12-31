@@ -331,7 +331,7 @@ if (from <= to) {
                 onChange={getMinWeightValue} value={minWeight} id="fromSlider" type="range"  min="0" max="950"/>
                 
                 <input onInput = {() => controlToSlider(fromSlider, toSlider,toInput)} 
-                onChange={getMaxWeightValue} value={maxWeight} id="toSlider" type="range"  min="0" max="950"/>
+                onChange={getMaxWeightValue} value={maxWeight} id="toSlider" type="range"  min="0" max="1000"/>
             </div>
          
         </div>
