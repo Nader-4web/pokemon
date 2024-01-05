@@ -49,7 +49,7 @@ function Cards({picture, name, id, types, updatePokemonId, clickedPokemon}) {
                     <div className="container-type-icon">
                         <div className="block-img">
                             {arrImg.map(({img}, i)=>(
-                                <img key={i} className= "img-type" src={img} alt="" />
+                                <img key={i} className= "img-type"  loading="lazy" src={img} alt="" />
                             ))}
                         </div>
                         <div className="block-type">
@@ -61,7 +61,7 @@ function Cards({picture, name, id, types, updatePokemonId, clickedPokemon}) {
                                 ))}
                         </div>
                     </div>                
-                        <img id ="img-pokemon" src={picture} alt="" />
+                        <img id ="img-pokemon" loading="lazy" src={picture} alt="" />
                 </div>
                 
             </div>

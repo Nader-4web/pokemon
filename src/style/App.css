@@ -413,6 +413,11 @@ footer p{
   cursor: pointer;
 }
 
+.pokemon-details_block{
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
 .pokemon-details_pointer{
   cursor: pointer;
   padding-bottom: 10px;

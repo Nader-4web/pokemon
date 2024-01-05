@@ -129,19 +129,22 @@ function PokemonDetails({hideCard, pokemonId}){
                     <span className="selected-pokemon_category">{pokemon.category}</span>
                 </div>
             </div>
-            <div className="pokemon-details">
-                <h4 onClick={displayAbout} className={about ? "active" : "pokemon-details_pointer"}>A propos</h4>
-                <h4 onClick={displayStats} className={stats ? "active" : "pokemon-details_pointer"}>Stats</h4>            
-                <h4 onClick={displayEvolutions} className={evolutions ? "active" : "pokemon-details_pointer"}>Evolutions</h4>
-            </div>
-                {about && <About poids = {pokemon.weight} taille = {pokemon.height} types = {pokemon.types} talents = {pokemon.talents}/>}
-                {stats && <Stats stats = {pokemon.stats} types = {pokemon.types}/>}
-                {evolutions && <Evolutions 
-                evolution = {pokemon.evolution}
-                id = {pokemon.pokedexId}
-                name = {pokemon.name.fr}
-                pkmnTypes = {pokemon.types}
-                picture = {pokemon.sprites.regular}/>}       
+            <div className="pokemon-details_block">
+                <div className="pokemon-details">
+                    <h4 onClick={displayAbout} className={about ? "active" : "pokemon-details_pointer"}>A propos</h4>
+                    <h4 onClick={displayStats} className={stats ? "active" : "pokemon-details_pointer"}>Stats</h4>            
+                    <h4 onClick={displayEvolutions} className={evolutions ? "active" : "pokemon-details_pointer"}>Evolutions</h4>
+                </div>
+            
+                    {about && <About poids = {pokemon.weight} taille = {pokemon.height} types = {pokemon.types} talents = {pokemon.talents}/>}
+                    {stats && <Stats stats = {pokemon.stats} types = {pokemon.types}/>}
+                    {evolutions && <Evolutions 
+                    evolution = {pokemon.evolution}
+                    id = {pokemon.pokedexId}
+                    name = {pokemon.name.fr}
+                    pkmnTypes = {pokemon.types}
+                    picture = {pokemon.sprites.regular}/>} 
+            </div>      
         </div>
     );
   

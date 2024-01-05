@@ -191,7 +191,7 @@ function Home() {
           <div className="block-title-logo" onClick={refreshPage}>
           <h1 className="h1-pokedex" >Pokedex</h1>
             <div className="logo-pokedex">
-              <img className="img-logo" src="pokeball-4.png" alt="" />
+              <img className="img-logo"  loading="lazy" src="pokeball-4.png" alt="" />
             </div>
         </div>
           <p>Utilises le filtre pour trouver des pokémons par génération, par type, et plus !</p>
@@ -199,7 +199,7 @@ function Home() {
         </header>
           <div className="not-found">
             <h3>Pokémon non trouvé !</h3>
-            <img id="photo-psychokwak" src="psycho-img.jpg" alt="" />
+            <img id="photo-psychokwak"  loading="lazy" src="psycho-img.jpg" alt="" />
           </div>
           { isFilterVisible && < Filter displayFilter={isFilterVisible} applyFilter={applyFilter} hideFilter={hideFilter}/>} 
         </div>
@@ -207,7 +207,7 @@ function Home() {
           <NavLink className={(activeLink) => (activeLink.isActive ? 'activeLink' : 'not-active-link')}>
             <div className="navigation_elements">
               <h4 className="navigation_elements_text">Accueil</h4>
-              <img src="pokeball-4.png" alt="" className="navigation_pokeball"/>
+              <img src="pokeball-4.png" alt=""  loading="lazy" className="navigation_pokeball"/>
             </div>
           </NavLink>
           <NavLink to ="/favoris" className={(activeLink) => (activeLink.isActive ? 'activeLink' : 'not-active-link')}>
@@ -229,7 +229,7 @@ function Home() {
           <div className="block-title-logo" onClick={refreshPage}>
           <h1 className="h1-pokedex" >Pokedex</h1>
             <div className="logo-pokedex">
-              <img className="img-logo" src="pokeball-4.png" alt="" />
+              <img className="img-logo"  loading="lazy" src="pokeball-4.png" alt="" />
             </div>
         </div>
           <p>Utilises le filtre pour trouver des pokémons par génération, par type, et plus !</p>
@@ -237,7 +237,7 @@ function Home() {
         </header>
           <div className="not-found">
             <h3>Pokémon non trouvé !</h3>
-            <img id="photo-psychokwak" src="psycho-img.jpg" alt="" />
+            <img id="photo-psychokwak"  loading="lazy" src="psycho-img.jpg" alt="" />
           </div>
           { isFilterVisible && < Filter displayFilter={isFilterVisible} applyFilter={applyFilter} hideFilter={hideFilter}/>} 
         </div>
@@ -269,7 +269,7 @@ function Home() {
           <div className="block-title-logo" onClick={refreshPage}>
           <h1 className="h1-pokedex" >Pokedex</h1>
             <div className="logo-pokedex">
-              <img className="img-logo" src="pokeball-4.png" alt="" />
+              <img className="img-logo"  loading="lazy" src="pokeball-4.png" alt="" />
             </div>
         </div>
           <p>Utilises le filtre pour trouver des pokémons par génération, par type, et plus !</p>
@@ -322,7 +322,7 @@ function Home() {
         <div className="block-title-logo" onClick={refreshPage}>
           <h1 className="h1-pokedex" >Pokedex</h1>
             <div className="logo-pokedex">
-              <img className="img-logo" src="pokeball-4.png" alt="" />
+              <img className="img-logo"  loading="lazy" src="pokeball-4.png" alt="" />
             </div>
         </div>
 
@@ -348,7 +348,7 @@ function Home() {
           <NavLink className={(activeLink) => (activeLink.isActive ? 'activeLink' : 'not-active-link')}>
             <div className="navigation_elements">         
               <h4 className="navigation_elements_text">Accueil</h4>
-              <img src="pokeball-4.png" alt="" className="navigation_pokeball"/>
+              <img src="pokeball-4.png" alt=""  loading="lazy" className="navigation_pokeball"/>
             </div>
           </NavLink>
           
