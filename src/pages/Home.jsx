@@ -31,7 +31,6 @@ function Home() {
       );
       const data = await response.json();
       const slicedData = data.slice(1, data.length)
-    
       if(data.status === 404){
         console.log("status 404")
        return 
@@ -46,7 +45,7 @@ function Home() {
         }
 
       const allPokemons = pokemonsArray.filter(pokemon => normalizeString(pokemon.name.fr).startsWith(searchValue)
-      || (pokemon.pokedexId === Number(searchValue)));
+      || (pokemon.pokedex_id === Number(searchValue)));
       const getPokeByGeneration = allPokemons.filter((pokemon) => pokemon.generation === generation);   
       const getPokeByType = allPokemons.filter((pokemon) => pokemon.types.some((t) => t.name === type));
       const getPokeByWeight = allPokemons.filter(pokemon => {const weight = parseFloat(pokemon.weight.replace(",", "."));
@@ -276,10 +275,10 @@ function Home() {
           <Searchbar onSearchChange={handleSearchChange} displayFilter={displayFilter} />
         </header>
           <div className="block-cards">
-            <Cards key={pokemon.pokedexId}
+            <Cards key={pokemon.pokedex_id}
               name={pokemon.name.fr}
               picture={pokemon.sprites.regular}
-              id = {pokemon.pokedexId}
+              id = {pokemon.pokedex_id}
               types ={pokemon.types}
               updatePokemonId = {updatePokemonId}
               clickedPokemon = {clickedPokemon}
@@ -331,10 +330,10 @@ function Home() {
         </header>
         <div className="block-cards">
           {pokemons.map((pokemon) => ( 
-            <Cards key={pokemon.pokedexId} 
+            <Cards key={pokemon.pokedex_id} 
             name={pokemon.name.fr} 
             picture={pokemon.sprites.regular}
-            id = {pokemon.pokedexId}
+            id = {pokemon.pokedex_id}
             types ={pokemon.types}
             updatePokemonId = {updatePokemonId}
             clickedPokemon ={clickedPokemon} />

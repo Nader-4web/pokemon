@@ -55,11 +55,11 @@ function Evolutions({ nextEvo, preEvo, pkmnTypes, evolution, name, id, picture }
   }else{
     if (evolution.pre === null) {
       for (let i = 0; i < evolution.next.length; i++) {
-        idsNextEvolution.push(evolution.next[i].pokedexId);
+        idsNextEvolution.push(evolution.next[i].pokedex_id);
       }
     } else if (evolution.next === null) {
       for (let i = 0; i < evolution.pre.length; i++) {
-        idsPreEvolution.push(evolution.pre[i].pokedexId);
+        idsPreEvolution.push(evolution.pre[i].pokedex_id);
       }
   
     }else if(!evolution){
@@ -68,11 +68,11 @@ function Evolutions({ nextEvo, preEvo, pkmnTypes, evolution, name, id, picture }
     
     else {
       for (let i = 0; i < evolution.next.length; i++) {
-        idsNextEvolution.push(evolution.next[i].pokedexId);
+        idsNextEvolution.push(evolution.next[i].pokedex_id);
       }
   
       for (let i = 0; i < evolution.pre.length; i++) {
-        idsPreEvolution.push(evolution.pre[i].pokedexId);
+        idsPreEvolution.push(evolution.pre[i].pokedex_id);
       }
     }
 
@@ -91,13 +91,13 @@ function Evolutions({ nextEvo, preEvo, pkmnTypes, evolution, name, id, picture }
     return (
       <div>
         {pokemons.map((pokemon) => (
-          <div key={pokemon.pokedexId} className="block-evolutions">
+          <div key={pokemon.pokedex_id} className="block-evolutions">
             <div className="block-evolutions_img">
             {/* {selectedPokemon && <PokemonDetails hideCard = {hideCard} pokemonId = {pokemon.pokedexId}/>} */}
               <img className="img-evolutions" src={pokemon.sprites.regular} alt="" />
             </div>
             <div>
-              <span className="block-evolutions_id">{"#" + pokemon.pokedexId.toString().padStart(3, "0")}</span>
+              <span className="block-evolutions_id">{"#" + pokemon.pokedex_id.toString().padStart(3, "0")}</span>
               <h5 className="block-evolutions_name">{pokemon.name.fr}</h5>
   
               <div className="container-type-icon">

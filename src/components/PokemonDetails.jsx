@@ -119,7 +119,7 @@ function PokemonDetails({hideCard, pokemonId}){
             <div className='selected-pokemon_block' style={{background: `linear-gradient(to bottom, ${colours[typeColor]}, #ffff)` }}>
                 <div className="selected-pokemon_block_elements">
                     <span id='selected-pokemon_arrow-back' onClick={closeCard}><i className="fa-solid fa-chevron-left"></i></span>
-                    <p className="selected-id">{"#" + pokemon.pokedexId.toString().padStart(3, "0")}</p>
+                    <p className="selected-id">{"#" + pokemon.pokedex_id.toString().padStart(3, "0")}</p>
                     { addPokeToFavorite ? <span><i className="fa-solid fa-heart heart-favorite" onClick={addToFavorite}></i></span>:
                     <span><i className="fa-regular fa-heart" onClick={addToFavorite}></i></span>}                 
                 </div>
@@ -140,7 +140,7 @@ function PokemonDetails({hideCard, pokemonId}){
                     {stats && <Stats stats = {pokemon.stats} types = {pokemon.types}/>}
                     {evolutions && <Evolutions 
                     evolution = {pokemon.evolution}
-                    id = {pokemon.pokedexId}
+                    id = {pokemon.pokedex_id}
                     name = {pokemon.name.fr}
                     pkmnTypes = {pokemon.types}
                     picture = {pokemon.sprites.regular}/>} 
