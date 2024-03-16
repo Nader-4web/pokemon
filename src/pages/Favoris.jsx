@@ -62,9 +62,9 @@ function Favoris() {
                       </header>
                       <div className="block-cards">
                           {pokemonsInLs.map((pokemon) =>(
-                          <Cards key = {pokemon.pokedexId} 
+                          <Cards key = {pokemon.pokedex_id} 
                           picture = {pokemon.sprites.regular}
-                          id = {pokemon.pokedexId}
+                          id = {pokemon.pokedex_id}
                           types = {pokemon.types}
                           name = {pokemon.name.fr}
                           updatePokemonId = {updatePokemonId} 

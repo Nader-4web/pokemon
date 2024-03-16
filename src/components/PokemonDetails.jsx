@@ -33,10 +33,10 @@ function PokemonDetails({hideCard, pokemonId}){
 
     useEffect(() => {
         let favoris = JSON.parse(localStorage.getItem("favoris")) || [];
-        let pokemonsInLS = favoris.find((p) => p?.pokedexId === pokemon?.pokedexId);
+        let pokemonsInLS = favoris.find((p) => p?.pokedex_id === pokemon?.pokedex_id);
     
         setAddPokeToFavorite(!!pokemonsInLS);
-      }, [pokemon && pokemon.pokedexId]);
+      }, [pokemon && pokemon.pokedex_id]);
 
     const closeCard = ()=>{
         hideCard()
@@ -92,7 +92,7 @@ function PokemonDetails({hideCard, pokemonId}){
 
     const addToFavorite = () => {    
         let favoris = JSON.parse(localStorage.getItem("favoris")) || [];
-        let pokemonsInLS = favoris.find(p => p?.pokedexId === pokemon?.pokedexId);
+        let pokemonsInLS = favoris.find(p => p?.pokedex_id === pokemon?.pokedex_id);
         
         if (pokemonsInLS) {
             setAddPokeToFavorite(false);
@@ -107,7 +107,7 @@ function PokemonDetails({hideCard, pokemonId}){
 
     const deletePokeFromFavorite = ()=>{    
         let favoris = JSON.parse(localStorage.getItem("favoris")) || [];
-        const index = favoris.findIndex(p => p.pokedexId === pokemon.pokedexId)
+        const index = favoris.findIndex(p => p.pokedex_id === pokemon.pokedex_id)
         if(index !== -1){
             favoris.splice(index, 1)
             localStorage.setItem("favoris", JSON.stringify(favoris));
