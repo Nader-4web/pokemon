@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import PokemonDetails from "./PokemonDetails";
+import { NavLink } from "react-router-dom";
 
 function Evolutions({ nextEvo, preEvo, pkmnTypes, evolution, name, id, picture }) {
   const [pokemons, setPokemons] = useState([]);
@@ -92,10 +93,12 @@ function Evolutions({ nextEvo, preEvo, pkmnTypes, evolution, name, id, picture }
       <div>
         {pokemons.map((pokemon) => (
           <div key={pokemon.pokedex_id} className="block-evolutions">
+            <NavLink to={`/PokemonDetails/${pokemon.pokedex_id}`} target="_blank">
             <div className="block-evolutions_img">
             {/* {selectedPokemon && <PokemonDetails hideCard = {hideCard} pokemonId = {pokemon.pokedexId}/>} */}
               <img className="img-evolutions" src={pokemon.sprites.regular} alt="" />
             </div>
+                  </NavLink>
             <div>
               <span className="block-evolutions_id">{"#" + pokemon.pokedex_id.toString().padStart(3, "0")}</span>
               <h5 className="block-evolutions_name">{pokemon.name.fr}</h5>
@@ -118,7 +121,6 @@ function Evolutions({ nextEvo, preEvo, pkmnTypes, evolution, name, id, picture }
             
           </div>
         ))}
-  
       </div>
     );
   }
