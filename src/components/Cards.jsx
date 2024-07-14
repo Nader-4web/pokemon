@@ -1,4 +1,5 @@
 import "../style/App.css"
+import { NavLink } from "react-router-dom";
 
 function Cards({picture, name, id, types, updatePokemonId, clickedPokemon}) {
         
@@ -33,14 +34,15 @@ function Cards({picture, name, id, types, updatePokemonId, clickedPokemon}) {
 
     let typeColor = types[0].name;
 
-    const handleClick = ()=>{
-        clickedPokemon()
-        const selectedPokemonId = id;
-        updatePokemonId(selectedPokemonId)
-    }
-    
+    // const handleClick = ()=>{
+    //     clickedPokemon()
+    //     const selectedPokemonId = id;
+    //     updatePokemonId(selectedPokemonId)
+    // }
+    // onClick={handleClick}
     return (
-            <div className='card' style={{backgroundColor: colours[typeColor]}} onClick={handleClick}>
+            <div className='card' style={{backgroundColor: colours[typeColor]}} >
+            <NavLink to={`/PokemonDetails/${id}`} target="_blank">
                 <div className="block-name-id">
                     <p id='name-pokemon'>{name}</p>
                     <span id="pokemon-number">{"# "+ id.toString().padStart(3, "0")}</span>
@@ -64,6 +66,7 @@ function Cards({picture, name, id, types, updatePokemonId, clickedPokemon}) {
                         <img id ="img-pokemon" loading="lazy" src={picture} alt="" />
                 </div>
                 
+            </NavLink>
             </div>
         
         );

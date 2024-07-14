@@ -2,20 +2,22 @@ import { useEffect, useState} from "react";
 import About from "./About"
 import Stats from "./Stats"
 import Evolutions from "./Evolutions"
+import { useParams } from 'react-router';
 
 
-function PokemonDetails({hideCard, pokemonId}){
+function PokemonDetails(){
 
     const [pokemon, setPokemon] = useState()
     const [about, setAbout] = useState(true)
     const [stats, setStats] = useState(false)
     const [evolutions, setEvolutions] = useState(false)
     const [addPokeToFavorite, setAddPokeToFavorite] = useState(false)
+    const { id } = useParams('id');
 
     const fetchPokemon = async () => {
       try {
         const response = await fetch(
-          `https://tyradex.vercel.app/api/v1/pokemon/${pokemonId}`
+          `https://tyradex.vercel.app/api/v1/pokemon/${id}`
         );
         const pokemonData = await response.json();
 
@@ -39,7 +41,7 @@ function PokemonDetails({hideCard, pokemonId}){
       }, [pokemon && pokemon.pokedex_id]);
 
     const closeCard = ()=>{
-        hideCard()
+        window.close()
     }
 
     if(pokemon === undefined){
@@ -118,7 +120,7 @@ function PokemonDetails({hideCard, pokemonId}){
         <div className='selected-pokemon'>
             <div className='selected-pokemon_block' style={{background: `linear-gradient(to bottom, ${colours[typeColor]}, #ffff)` }}>
                 <div className="selected-pokemon_block_elements">
-                    <span id='selected-pokemon_arrow-back' onClick={closeCard}><i className="fa-solid fa-chevron-left"></i></span>
+                    <span id='selected-pokemon_arrow-back' onClick={closeCard}><i className="fa-solid fa-chevron-left" ></i></span>
                     <p className="selected-id">{"#" + pokemon.pokedex_id.toString().padStart(3, "0")}</p>
                     { addPokeToFavorite ? <span><i className="fa-solid fa-heart heart-favorite" onClick={addToFavorite}></i></span>:
                     <span><i className="fa-regular fa-heart" onClick={addToFavorite}></i></span>}                 
