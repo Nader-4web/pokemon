@@ -14,7 +14,7 @@ function Evolutions({ nextEvo, preEvo, pkmnTypes, evolution, name, id, picture }
   const fetchPokemon = async (id) => {
     try {
       const response = await fetch(
-        `https://tyradex.vercel.app/api/v1/pokemon/${id}`
+        `https://tyradex.app/api/v1/pokemon/${id}`
       );
       const pokemonData = await response.json();
 

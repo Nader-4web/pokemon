@@ -27,7 +27,7 @@ function Home() {
   minHeight = undefined, maxHeight = undefined) => {
     try {
       const response = await fetch(
-        `https://tyradex.vercel.app/api/v1/pokemon`
+        `https://tyradex.app/api/v1/pokemon`
       );
       const data = await response.json();
       const slicedData = data.slice(1, data.length)

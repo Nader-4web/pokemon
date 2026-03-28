@@ -174,7 +174,7 @@ function PokemonDetails() {
     const fetchPokemon = async () => {
         try {
             const response = await fetch(
-                `https://tyradex.vercel.app/api/v1/pokemon/${id}`
+                `https://tyradex.app/api/v1/pokemon/${id}`
             );
             const pokemonData = await response.json();
             setPokemon(pokemonData);
