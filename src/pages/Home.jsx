@@ -44,6 +44,8 @@ function Home() {
           .replace(/[^a-z0-9]/g, '');
         }
 
+        // essaie push nouvelle adresse api 1
+
       const allPokemons = pokemonsArray.filter(pokemon => normalizeString(pokemon.name.fr).startsWith(searchValue)
       || (pokemon.pokedex_id === Number(searchValue)));
       const getPokeByGeneration = allPokemons.filter((pokemon) => pokemon.generation === generation);   
