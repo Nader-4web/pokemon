@@ -44,7 +44,7 @@ function Home() {
           .replace(/[^a-z0-9]/g, '');
         }
 
-        // essaie push nouvelle adresse api 1
+        // essaie push nouvelle adresse api 2
 
       const allPokemons = pokemonsArray.filter(pokemon => normalizeString(pokemon.name.fr).startsWith(searchValue)
       || (pokemon.pokedex_id === Number(searchValue)));
